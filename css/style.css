@@ -1,0 +1,62 @@
+* { margin:0; padding:0; box-sizing: border-box; }
+ul li { list-style: none;}
+body { 
+    display:flex; 
+    justify-content: center; 
+    align-items: center; 
+    width:100%; height:100vh;
+    background:#999; 
+}
+.wrap { position:relative; width:500px; height:500px; background:#fff; }
+.wrap > ul { 
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    position:relative; 
+    left:-50%; top:50%; 
+    width:1000px; height:1000px; 
+    transition:all 1.2s;
+}
+.wrap > ul li.item { 
+    position:relative;
+    position:absolute;
+    width:400px; height:400px; 
+    transform-origin:500px;
+    transform:translateX(-300px) rotate(calc(360deg/4*var(--i)));
+    background:#06f;
+    border-radius:100px;
+}
+.wrap > ul li.item > div { 
+    transform:rotate(calc(-360deg/4*var(--i)));
+}
+
+
+/* 서클 네비게이션 */
+
+.circlenavi {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute; left:-50%;
+    width:100%; height:100%; background:#ff0; 
+}
+
+.circlenavi .toggle { 
+    width:60px; height:60px; 
+    display:flex; justify-content:center; align-items: center;
+    background:#f00;
+    border-radius:50%;  
+}
+.circlenavi .cir-items {
+    position:absolute; display:flex; justify-content: center; align-items: center;
+}
+.circlenavi .cir-item {
+    position:absolute; 
+    transform-origin:100px; 
+    transform:translateX(-80px) rotate(calc(360deg/6*var(--j)));
+}
+.circlenavi .cir-item a { 
+    display:flex; justify-content: center; align-items: center; 
+    width:40px; height:40px; background:#fff; 
+    transform:rotate(calc(-360deg/6*var(--j)));
+}

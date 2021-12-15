@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <ul class="items">
+            <!-- 서클네비게이션 -->
+            <li class="item" style="--i:0;">
+
+            </li>
+            <li class="item" style="--i:1;">
+                <div class="circlenavi">
+                    <ul class="cir-items">
+                        <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
+                        <li class="cir-item" style="--j:0;"><a href="#"><ion-icon name="home-outline"></ion-icon></a></li>
+                        <li class="cir-item" style="--j:1;"><a href="#"><ion-icon name="home-outline"></ion-icon></a></li>
+                        <li class="cir-item" style="--j:2;"><a href="#"><ion-icon name="play-outline"></ion-icon></a></li>
+                        <li class="cir-item" style="--j:3;"><a href="#"><ion-icon name="game-controller-outline"></ion-icon></a></li>
+                        <li class="cir-item" style="--j:4;"><a href="#"><ion-icon name="keypad-outline"></ion-icon></a></li>
+                        <li class="cir-item" style="--j:5;"><a href="#"><ion-icon name="settings-outline"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item" style="--i:2;"></li>
+            <li class="item" style="--i:3;"></li>
+        </ul>
+    </div>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+        var currentIndex = 0;
+        $(".items .item").click(function(){
+            if(currentIndex<3){
+                currentIndex++;
+            }else currentIndex = 0;
+            var pos = -90*currentIndex;
+            $(".items").css({'transform':'rotate('+pos+'deg)'});
+        })
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
