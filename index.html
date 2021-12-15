@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="wrap">
+        <div class="main-btn"></div>
         <ul class="items">
             <!-- 서클네비게이션 -->
             <li class="item" style="--i:0;">
@@ -34,7 +35,7 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script>
         var currentIndex = 0;
-        $(".items .item").click(function(){
+        $(".items > .item").click(function(){
             if(currentIndex<3){
                 currentIndex++;
             }else currentIndex = 0;
